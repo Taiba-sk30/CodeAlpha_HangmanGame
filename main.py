@@ -21,7 +21,7 @@ choice = input("\nChoose a category: ").lower()
 
 # Validate category
 if choice not in categories:
-    print("❌ Invalid choice! Defaulting to 'animals'")
+    print("Invalid choice! Defaulting to 'animals'")
     choice = "animals"
 
 # Select random word
@@ -42,18 +42,18 @@ while attempts > 0 and "_" in guessed:
 
     # Validation
     if len(guess) != 1 or not guess.isalpha():
-        print("⚠️ Enter only one letter!")
+        print("Enter only one letter!")
         continue
 
     if guess in guessed_letters:
-        print("⚠️ Already guessed!")
+        print("Already guessed!")
         continue
 
     guessed_letters.append(guess)
 
     # Check guess
     if guess in word:
-        print("✅ Correct!")
+        print("Correct!")
         for i in range(len(word)):
             if word[i] == guess:
                 guessed[i] = guess
